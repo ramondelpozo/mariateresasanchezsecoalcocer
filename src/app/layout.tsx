@@ -1,8 +1,6 @@
 ﻿import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import Header from "@/components/site/Header" // Ajusta si tu Header está en otra carpeta
-import Footer from "@/components/site/Footer" // Ajusta si tu Footer está en otra carpeta
-import "./globals.css"
+import "../styles.css" // 👈 AQUÍ: Apuntando a tu archivo real en src/styles.css
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -19,9 +17,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`${inter.className} antialiased bg-white`}>
-        <Header />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   )
