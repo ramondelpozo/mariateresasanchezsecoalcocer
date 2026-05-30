@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Política de Privacidad - María Teresa Sánchez-Seco Alcocer, Abogada en Alcalá de Henares">
+    <title>Política de Privacidad | María Teresa Sánchez-Seco Alcocer</title>
+    <style>
+        :root {
+            --color-cream: #fffef9;
+            --color-gold: #c9a961;
+            --color-gold-light: #e6d5b8;
+            --color-gold-dark: #b8960c;
+            --color-gold-bg: #f5f0e6;
+            --color-charcoal: #2d3436;
+            --color-gray: #636e72;
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: var(--font-sans);
+            background: var(--color-gold-bg);
+            color: var(--color-charcoal);
+            line-height: 1.7;
+        }
+        h1, h2, h3 { font-family: var(--font-serif); color: var(--color-charcoal); }
+        a { color: var(--color-gold); text-decoration: none; transition: 0.3s; }
+        a:hover { color: var(--color-gold-dark); }
+        
+        header {
+            background: linear-gradient(135deg, var(--color-charcoal), #1a1a1a);
+            color: var(--color-cream);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--color-cream);
+        }
+        .logo-icon { font-size: 1.75rem; color: var(--color-gold); }
+        .logo-text strong { font-family: var(--font-serif); color: var(--color-gold); }
+        .logo-text span { font-size: 0.85rem; color: var(--color-gold-light); }
+        .back-link {
+            color: var(--color-cream);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(201, 169, 97, 0.2);
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .back-link:hover { background: var(--color-gold); color: var(--color-charcoal); }
+        
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--color-gold);
+        }
+        .page-header h1 { font-size: 2.25rem; margin-bottom: 0.5rem; }
+        .page-header .updated { color: var(--color-gray); font-size: 0.95rem; }
+        
+        .legal-content {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+        }
+        .legal-content h2 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-gold-light);
+        }
+        .legal-content h2:first-child { margin-top: 0; }
+        .legal-content p { margin-bottom: 1rem; color: var(--color-gray); }
+        .legal-content ul { margin: 1rem 0; padding-left: 2rem; color: var(--color-gray); }
+        .legal-content li { margin-bottom: 0.5rem; }
+        .legal-content strong { color: var(--color-charcoal); }
+        .legal-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+        .legal-content th, .legal-content td {
+            padding: 0.75rem;
+            border: 1px solid var(--color-gold-light);
+            text-align: left;
+        }
+        .legal-content th {
+            background: var(--color-gold-bg);
+            font-weight: 600;
+            color: var(--color-charcoal);
+        }
+        
+        .compliance-badge {
+            background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+            color: var(--color-charcoal);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        footer {
+            background: var(--color-charcoal);
+            color: var(--color-cream);
+            padding: 2rem;
+            text-align: center;
+        }
+        footer a { color: var(--color-gold-light); }
+        footer a:hover { color: var(--color-gold); }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+        .copyright { color: var(--color-gold-light); font-size: 0.9rem; margin-top: 1rem; }
+        
+        @media (max-width: 768px) {
+            .header-content { flex-direction: column; gap: 1rem; text-align: center; }
+            main { padding: 2rem 1.5rem; }
+            .legal-content { padding: 2rem 1.5rem; }
+            .legal-content table { font-size: 0.9rem; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">⚖️</span>
+                <div class="logo-text">
+                    <strong>María Teresa Sánchez-Seco</strong><br>
+                    <span>Abogada · Colegiada nº 4138</span>
+                </div>
+            </a>
+            <a href="index.html" class="back-link">← Volver al inicio</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1>Política de Privacidad</h1>
+            <p class="updated">Última actualización: 1 de enero de 2026</p>
+        </div>
+
+        <div class="legal-content">
+            <h2>1. Responsable del tratamiento</h2>
+            <p><strong>Identificación:</strong> María Teresa Sánchez-Seco Alcocer<br>
+            <strong>Domicilio:</strong> Calle Teniente Ruiz nº 10, 1ª planta, oficina 4, 28805 Alcalá de Henares, Madrid<br>
+            <strong>Teléfono:</strong> 91 888 59 41 / 646 205 732<br>
+            <strong>Email:</strong> <a href="mailto:Teresasanchezseco@gmail.com">Teresasanchezseco@gmail.com</a><br>
+            <strong>Colegiación:</strong> Colegio de Abogados de Alcalá de Henares, nº 4138</p>
+
+            <h2>2. Finalidades del tratamiento</h2>
+            <p>Tratamos sus datos personales para las siguientes finalidades:</p>
+            <ul>
+                <li>Gestión de consultas y solicitud de servicios jurídicos</li>
+                <li>Comunicación y atención al cliente</li>
+                <li>Cumplimiento de obligaciones legales y deontológicas de la abogacía</li>
+                <li>Envío de comunicaciones profesionales (solo con consentimiento expreso)</li>
+                <li>Mejora y análisis del funcionamiento de nuestro sitio web</li>
+            </ul>
+
+            <h2>3. Base jurídica del tratamiento</h2>
+            <ul>
+                <li><strong>Ejecución de contrato:</strong> Para la prestación de servicios jurídicos solicitados</li>
+                <li><strong>Obligación legal:</strong> Cumplimiento de normas deontológicas y legales de la abogacía</li>
+                <li><strong>Consentimiento:</strong> Para envío de comunicaciones comerciales o newsletter</li>
+                <li><strong>Interés legítimo:</strong> Para la mejora de nuestros servicios y seguridad del sitio web</li>
+            </ul>
+
+            <h2>4. Destinatarios de los datos</h2>
+            <p>Sus datos no serán cedidos a terceros, salvo:</p>
+            <ul>
+                <li>Obligación legal expresa (requerimientos judiciales, administrativos)</li>
+                <li>Proveedores de servicios necesarios para el funcionamiento del despacho (gestoría, hosting seguro), bajo contrato de encargo de tratamiento</li>
+                <li>Con su consentimiento expreso para finalidades específicas</li>
+            </ul>
+
+            <h2>5. Plazo de conservación</h2>
+            <p>Conservaremos sus datos mientras mantengamos una relación profesional o durante los plazos legalmente exigibles:</p>
+            <ul>
+                <li>Consultas no derivadas en contrato: 2 años desde la última interacción</li>
+                <li>Expedientes profesionales: 5 años desde la finalización del asunto (Ley de Enjuiciamiento Civil)</li>
+                <li>Documentación de prevención de blanqueo: 10 años (Ley 10/2010)</li>
+                <li>Datos para envío de newsletter: hasta que retire su consentimiento</li>
+            </ul>
+
+            <h2>6. Derechos del interesado</h2>
+            <p>Puede ejercer los siguientes derechos en cualquier momento:</p>
+            <ul>
+                <li><strong>Acceso:</strong> Conocer qué datos tratamos y cómo</li>
+                <li><strong>Rectificación:</strong> Corregir datos inexactos</li>
+                <li><strong>Supresión:</strong> Solicitar la eliminación de sus datos</li>
+                <li><strong>Limitación:</strong> Restringir el tratamiento en ciertos casos</li>
+                <li><strong>Portabilidad:</strong> Recibir sus datos en formato estructurado</li>
+                <li><strong>Oposición:</strong> Oponerse al tratamiento por motivos legítimos</li>
+            </ul>
+            <p><strong>Cómo ejercer sus derechos:</strong> Envíe una comunicación escrita con copia de su DNI/NIE a: <a href="mailto:Teresasanchezseco@gmail.com">Teresasanchezseco@gmail.com</a> o a nuestra dirección postal, indicando en el asunto "Ejercicio de derechos RGPD".</p>
+
+            <h2>7. Medidas de seguridad</h2>
+            <p>Implementamos medidas técnicas y organizativas apropiadas para garantizar la seguridad de sus datos, incluyendo cifrado de comunicaciones, control de accesos, copias de seguridad seguras y formación continua del personal en protección de datos.</p>
+
+            <h2>8. Transferencias internacionales</h2>
+            <p>En principio, sus datos se tratan dentro del Espacio Económico Europeo. En caso de transferencia internacional necesaria, garantizamos el cumplimiento del RGPD mediante cláusulas contractuales tipo o decisiones de adecuación de la Comisión Europea.</p>
+
+            <h2>9. Reclamaciones</h2>
+            <p>Si considera que el tratamiento de sus datos no se ajusta a la normativa, tiene derecho a presentar una reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong>: C/ Jorge Juan, 6 · 28001 Madrid | www.aepd.es</p>
+
+            <div class="compliance-badge">
+                ✅ Esta política cumple con el Reglamento General de Protección de Datos (RGPD) y la Ley Orgánica 3/2018 de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD).
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 María Teresa Sánchez-Seco Alcocer · Colegiada nº 4138</p>
+        <div class="footer-links">
+            <a href="aviso-legal.html">Aviso Legal</a>
+            <a href="politica-privacidad.html">Política de Privacidad</a>
+            <a href="politica-cookies.html">Política de Cookies</a>
+            <a href="politica-datos.html">Protección de Datos</a>
+            <a href="mapa-sitio.html">Mapa del Sitio</a>
+        </div>
+        <p class="copyright">Email: <a href="mailto:Teresasanchezseco@gmail.com">Teresasanchezseco@gmail.com</a></p>
+    </footer>
+</body>
+</html>

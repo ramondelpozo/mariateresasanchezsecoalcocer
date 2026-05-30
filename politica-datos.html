@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Protección de Datos - María Teresa Sánchez-Seco Alcocer, Abogada en Alcalá de Henares">
+    <title>Protección de Datos | María Teresa Sánchez-Seco Alcocer</title>
+    <style>
+        :root {
+            --color-cream: #fffef9;
+            --color-gold: #c9a961;
+            --color-gold-light: #e6d5b8;
+            --color-gold-dark: #b8960c;
+            --color-gold-bg: #f5f0e6;
+            --color-charcoal: #2d3436;
+            --color-gray: #636e72;
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: var(--font-sans);
+            background: var(--color-gold-bg);
+            color: var(--color-charcoal);
+            line-height: 1.7;
+        }
+        h1, h2, h3 { font-family: var(--font-serif); color: var(--color-charcoal); }
+        a { color: var(--color-gold); text-decoration: none; transition: 0.3s; }
+        a:hover { color: var(--color-gold-dark); }
+        
+        header {
+            background: linear-gradient(135deg, var(--color-charcoal), #1a1a1a);
+            color: var(--color-cream);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--color-cream);
+        }
+        .logo-icon { font-size: 1.75rem; color: var(--color-gold); }
+        .logo-text strong { font-family: var(--font-serif); color: var(--color-gold); }
+        .logo-text span { font-size: 0.85rem; color: var(--color-gold-light); }
+        .back-link {
+            color: var(--color-cream);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(201, 169, 97, 0.2);
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .back-link:hover { background: var(--color-gold); color: var(--color-charcoal); }
+        
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--color-gold);
+        }
+        .page-header h1 { font-size: 2.25rem; margin-bottom: 0.5rem; }
+        .page-header .updated { color: var(--color-gray); font-size: 0.95rem; }
+        
+        .legal-content {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+        }
+        .legal-content h2 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-gold-light);
+        }
+        .legal-content h2:first-child { margin-top: 0; }
+        .legal-content p { margin-bottom: 1rem; color: var(--color-gray); }
+        .legal-content ul { margin: 1rem 0; padding-left: 2rem; color: var(--color-gray); }
+        .legal-content li { margin-bottom: 0.5rem; }
+        .legal-content strong { color: var(--color-charcoal); }
+        
+        .security-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .security-item {
+            background: var(--color-gold-bg);
+            padding: 1.25rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--color-gold);
+        }
+        .security-item strong { display: block; margin-bottom: 0.5rem; color: var(--color-charcoal); }
+        
+        .compliance-badge {
+            background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+            color: var(--color-charcoal);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        footer {
+            background: var(--color-charcoal);
+            color: var(--color-cream);
+            padding: 2rem;
+            text-align: center;
+        }
+        footer a { color: var(--color-gold-light); }
+        footer a:hover { color: var(--color-gold); }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+        .copyright { color: var(--color-gold-light); font-size: 0.9rem; margin-top: 1rem; }
+        
+        @media (max-width: 768px) {
+            .header-content { flex-direction: column; gap: 1rem; text-align: center; }
+            main { padding: 2rem 1.5rem; }
+            .legal-content { padding: 2rem 1.5rem; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">⚖️</span>
+                <div class="logo-text">
+                    <strong>María Teresa Sánchez-Seco</strong><br>
+                    <span>Abogada · Colegiada nº 4138</span>
+                </div>
+            </a>
+            <a href="index.html" class="back-link">← Volver al inicio</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1>Protección de Datos</h1>
+            <p class="updated">Última actualización: 1 de enero de 2026</p>
+        </div>
+
+        <div class="legal-content">
+            <p>En María Teresa Sánchez-Seco Alcocer, la protección de sus datos personales es una prioridad absoluta. Esta política describe las medidas técnicas y organizativas que implementamos para garantizar la seguridad, confidencialidad e integridad de la información que nos confía, en cumplimiento del Reglamento General de Protección de Datos (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD).</p>
+
+            <h2>1. Principios de tratamiento</h2>
+            <p>Tratamos sus datos conforme a los principios establecidos en el artículo 5 del RGPD:</p>
+            <ul>
+                <li><strong>Licitud, lealtad y transparencia:</strong> Informamos claramente sobre el tratamiento de sus datos.</li>
+                <li><strong>Limitación de la finalidad:</strong> Solo usamos sus datos para los fines específicos comunicados.</li>
+                <li><strong>Minimización de datos:</strong> Solo recopilamos los datos estrictamente necesarios.</li>
+                <li><strong>Exactitud:</strong> Mantenemos sus datos actualizados y corregimos inexactitudes.</li>
+                <li><strong>Limitación del plazo de conservación:</strong> Eliminamos sus datos cuando ya no son necesarios.</li>
+                <li><strong>Integridad y confidencialidad:</strong> Protegemos sus datos con medidas de seguridad adecuadas.</li>
+            </ul>
+
+            <h2>2. Medidas de seguridad implementadas</h2>
+            
+            <h3>2.1. Medidas técnicas</h3>
+            <div class="security-grid">
+                <div class="security-item">
+                    <strong>🔐 Cifrado de comunicaciones</strong>
+                    Todo el tráfico web utiliza protocolo HTTPS/SSL.
+                </div>
+                <div class="security-item">
+                    <strong>👤 Control de accesos</strong>
+                    Autenticación de dos factores y permisos granulares para el personal.
+                </div>
+                <div class="security-item">
+                    <strong>💾 Cifrado de datos</strong>
+                    Información sensible cifrada en reposo y en tránsito.
+                </div>
+                <div class="security-item">
+                    <strong>🔄 Copias de seguridad</strong>
+                    Backups diarios cifrados en ubicaciones seguras.
+                </div>
+                <div class="security-item">
+                    <strong>🛡️ Protección contra malware</strong>
+                    Sistemas actualizados de detección y prevención.
+                </div>
+            </div>
+            
+            <h3>2.2. Medidas organizativas</h3>
+            <ul>
+                <li><strong>Acuerdos de confidencialidad:</strong> Todo el personal y colaboradores firman acuerdos de secreto profesional.</li>
+                <li><strong>Formación continua:</strong> Capacitación periódica en protección de datos y ciberseguridad.</li>
+                <li><strong>Registro de actividades:</strong> Documentación actualizada de todos los tratamientos de datos.</li>
+                <li><strong>Evaluaciones de impacto:</strong> Análisis de riesgos para tratamientos que puedan afectar a sus derechos.</li>
+                <li><strong>Respuesta a incidentes:</strong> Protocolos para notificar brechas de seguridad en menos de 72 horas.</li>
+            </ul>
+
+            <h2>3. Transferencias internacionales</h2>
+            <p>En principio, sus datos se tratan dentro del Espacio Económico Europeo (EEE). En caso de que sea necesaria una transferencia internacional, garantizamos que:</p>
+            <ul>
+                <li>El país destinatario cuenta con decisión de adecuación de la Comisión Europea, O</li>
+                <li>Se han establecido Cláusulas Contractuales Tipo aprobadas por la Comisión, O</li>
+                <li>Se aplican normas corporativas vinculantes o mecanismos equivalentes.</li>
+            </ul>
+
+            <h2>4. Derechos ARSULIPO</h2>
+            <p>Como interesado, usted puede ejercer los siguientes derechos en cualquier momento:</p>
+            <ul>
+                <li><strong>Acceso:</strong> Conocer qué datos suyos tratamos y cómo.</li>
+                <li><strong>Rectificación:</strong> Corregir datos inexactos o incompletos.</li>
+                <li><strong>Supresión:</strong> Solicitar la eliminación de sus datos ("derecho al olvido").</li>
+                <li><strong>Limitación:</strong> Restringir el tratamiento en ciertos supuestos.</li>
+                <li><strong>Información:</strong> Ser informado sobre transferencias internacionales.</li>
+                <li><strong>Portabilidad:</strong> Recibir sus datos en formato estructurado y transmitirlos a otro responsable.</li>
+                <li><strong>Oposición:</strong> Oponerse al tratamiento por motivos legítimos o para marketing directo.</li>
+            </ul>
+            
+            <p><strong>Cómo ejercer sus derechos:</strong> Envíe una comunicación escrita a:</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:Teresasanchezseco@gmail.com">Teresasanchezseco@gmail.com</a></li>
+                <li><strong>Correo postal:</strong> Calle Teniente Ruiz nº 10, 1ª planta, oficina 4, 28805 Alcalá de Henares</li>
+                <li><strong>Asunto:</strong> Ejercicio de derechos RGPD</li>
+            </ul>
+            <p><em>Adjunte copia de su DNI, NIE o documento identificativo para verificar su identidad. Respondemos en el plazo máximo de un mes.</em></p>
+
+            <h2>5. Autoridad de control</h2>
+            <p>Si considera que el tratamiento de sus datos no se ajusta a la normativa, tiene derecho a presentar una reclamación ante:</p>
+            <p><strong>Agencia Española de Protección de Datos (AEPD)</strong><br>
+            C/ Jorge Juan, 6 · 28001 Madrid<br>
+            Teléfono: 901 100 099 / 912 663 517<br>
+            Web: <a href="https://www.aepd.es" target="_blank">www.aepd.es</a><br>
+            Email: ciudadano@aepd.es</p>
+
+            <h2>6. Conservación de documentos profesionales</h2>
+            <p>Como despacho de abogados, estamos sujetos a obligaciones específicas de conservación documental:</p>
+            <ul>
+                <li><strong>Ley de Enjuiciamiento Civil:</strong> Conservación de expedientes durante 5 años desde la finalización del asunto.</li>
+                <li><strong>Ley de Prevención de Blanqueo de Capitales:</strong> Conservación de documentación identificativa y de operaciones durante 10 años.</li>
+                <li><strong>Estatuto General de la Abogacía:</strong> Deber de custodia de documentos profesionales.</li>
+            </ul>
+            <p><em>Estos plazos prevalecen sobre el derecho de supresión cuando exista una obligación legal de conservación.</em></p>
+
+            <h2>7. Actualizaciones de esta política</h2>
+            <p>Revisamos periódicamente esta política para adaptarla a cambios normativos, tecnológicos o en nuestras prácticas. Le notificaremos cambios sustanciales mediante aviso en nuestro sitio web o por email si nos ha autorizado a contactar con usted.</p>
+
+            <div class="compliance-badge">
+                ✅ María Teresa Sánchez-Seco Alcocer se compromete a tratar sus datos con la máxima diligencia, confidencialidad y seguridad, conforme a los más altos estándares éticos de la profesión de la abogacía y a la normativa de protección de datos vigente en la Unión Europea y España.
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 María Teresa Sánchez-Seco Alcocer · Colegiada nº 4138</p>
+        <div class="footer-links">
+            <a href="aviso-legal.html">Aviso Legal</a>
+            <a href="politica-privacidad.html">Política de Privacidad</a>
+            <a href="politica-cookies.html">Política de Cookies</a>
+            <a href="politica-datos.html">Protección de Datos</a>
+            <a href="mapa-sitio.html">Mapa del Sitio</a>
+        </div>
+        <p class="copyright">Email: <a href="mailto:Teresasanchezseco@gmail.com">Teresasanchezseco@gmail.com</a></p>
+    </footer>
+</body>
+</html>

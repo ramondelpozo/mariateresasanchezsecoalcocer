@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mapa del Sitio - María Teresa Sánchez-Seco Alcocer, Abogada en Alcalá de Henares">
+    <title>Mapa del Sitio | María Teresa Sánchez-Seco Alcocer</title>
+    <style>
+        :root {
+            --color-cream: #fffef9;
+            --color-gold: #c9a961;
+            --color-gold-light: #e6d5b8;
+            --color-gold-dark: #b8960c;
+            --color-gold-bg: #f5f0e6;
+            --color-charcoal: #2d3436;
+            --color-gray: #636e72;
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: var(--font-sans);
+            background: var(--color-gold-bg);
+            color: var(--color-charcoal);
+            line-height: 1.7;
+        }
+        h1, h2, h3 { font-family: var(--font-serif); color: var(--color-charcoal); }
+        a { color: var(--color-gold); text-decoration: none; transition: 0.3s; }
+        a:hover { color: var(--color-gold-dark); }
+        
+        header {
+            background: linear-gradient(135deg, var(--color-charcoal), #1a1a1a);
+            color: var(--color-cream);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--color-cream);
+        }
+        .logo-icon { font-size: 1.75rem; color: var(--color-gold); }
+        .logo-text strong { font-family: var(--font-serif); color: var(--color-gold); }
+        .logo-text span { font-size: 0.85rem; color: var(--color-gold-light); }
+        .back-link {
+            color: var(--color-cream);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(201, 169, 97, 0.2);
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .back-link:hover { background: var(--color-gold); color: var(--color-charcoal); }
+        
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--color-gold);
+        }
+        .page-header h1 { font-size: 2.25rem; margin-bottom: 0.5rem; }
+        .page-header p { color: var(--color-gray); }
+        
+        .sitemap {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        .sitemap-section {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--color-gold-light);
+        }
+        .sitemap-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .sitemap-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-gold-dark);
+        }
+        .sitemap-section ul {
+            list-style: none;
+            padding-left: 1rem;
+        }
+        .sitemap-section li {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .sitemap-section li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--color-gold);
+        }
+        .sitemap-section a {
+            color: var(--color-charcoal);
+            font-weight: 500;
+        }
+        .sitemap-section a:hover {
+            color: var(--color-gold-dark);
+        }
+        .sitemap-section .sub-item {
+            padding-left: 2.5rem;
+            font-size: 0.95rem;
+            color: var(--color-gray);
+        }
+        .sitemap-section .sub-item::before {
+            content: "•";
+            color: var(--color-gold-light);
+        }
+        
+        footer {
+            background: var(--color-charcoal);
+            color: var(--color-cream);
+            padding: 2rem;
+            text-align: center;
+        }
+        footer a { color: var(--color-gold-light); }
+        footer a:hover { color: var(--color-gold); }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+        .copyright { color: var(--color-gold-light); font-size: 0.9rem; margin-top: 1rem; }
+        
+        @media (max-width: 768px) {
+            .header-content { flex-direction: column; gap: 1rem; text-align: center; }
+            main { padding: 2rem 1.5rem; }
+            .sitemap { padding: 2rem 1.5rem; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">⚖️</span>
+                <div class="logo-text">
+                    <strong>María Teresa Sánchez-Seco</strong><br>
+                    <span>Abogada · Colegiada nº 4138</span>
+                </div>
+            </a>
+            <a href="index.html" class="back-link">← Volver al inicio</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1>Mapa del Sitio</h1>
+            <p>Estructura completa de contenidos del sitio web de María Teresa Sánchez-Seco Alcocer, despacho de abogados en Alcalá de Henares.</p>
+        </div>
+
+        <div class="sitemap">
+            <div class="sitemap-section">
+                <h2>🏠 Inicio</h2>
+                <ul>
+                    <li><a href="index.html#inicio">Hero: Presentación y valores</a></li>
+                    <li><a href="index.html#servicios">Servicios destacados</a></li>
+                    <li><a href="index.html#sobre">Sobre el despacho (resumen)</a></li>
+                    <li><a href="index.html#cita">Reserva rápida de cita</a></li>
+                </ul>
+            </div>
+
+            <div class="sitemap-section">
+                <h2>⚖️ Servicios</h2>
+                <ul>
+                    <li><a href="index.html#servicios">Vista general de servicios</a></li>
+                    <li>
+                        <a href="#">Asesoramiento Legal Personalizado</a>
+                        <ul>
+                            <li class="sub-item"><a href="index.html#cita">Solicitar consulta</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Defensa Jurídica</a>
+                        <ul>
+                            <li class="sub-item"><a href="index.html#cita">Solicitar representación</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Modalidades de consulta</a>
+                        <ul>
+                            <li class="sub-item"><a href="index.html#cita">Presencial</a></li>
+                            <li class="sub-item"><a href="index.html#cita">Telefónica</a></li>
+                            <li class="sub-item"><a href="index.html#cita">Videoconsulta</a></li>
+                            <li class="sub-item"><a href="index.html#cita">Atención urgente</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sitemap-section">
+                <h2>📚 Áreas de Práctica</h2>
+                <ul>
+                    <li><a href="index.html">Derecho Civil</a></li>
+                    <li><a href="index.html">Derecho Penal</a></li>
+                    <li><a href="index.html">Derecho Laboral</a></li>
+                    <li><a href="index.html">Derecho Mercantil</a></li>
+                    <li><a href="index.html">Derecho Administrativo</a></li>
+                    <li><a href="index.html">Derecho de Familia</a></li>
+                    <li><a href="index.html">Herencias y Sucesiones</a></li>
+                    <li><a href="index.html">Reclamaciones de Deuda</a></li>
+                    <li><a href="index.html">Arrendamientos Urbanos</a></li>
+                    <li><a href="index.html">Extranjería</a></li>
+                </ul>
+            </div>
+
+            <div class="sitemap-section">
+                <h2>📰 Blog Jurídico</h2>
+                <ul>
+                    <li><a href="index.html#blog">Artículos y actualizaciones legales</a></li>
+                    <li><a href="index.html#blog">Sentencias relevantes comentadas</a></li>
+                    <li><a href="index.html#blog">Guías prácticas para ciudadanos</a></li>
+                </ul>
+            </div>
+
+            <div class="sitemap-section">
+                <h2>💰 Honorarios</h2>
+                <ul>
+                    <li><a href="index.html#honorarios">Consulta gratuita inicial</a></li>
+                    <li><a href="index.html#honorarios">Consulta completa (desde 150€)</a></li>
+                    <li><a href="index.html#honorarios">Representación legal (según caso)</a></li>
+                    <li><a href="index.html#honorarios">Formas de pago flexibles</a></li>
+                </ul>
+            </div>
+
+            <div class="sitemap-section">
+                <h2>📬 Contacto</h2>
+                <ul>
+                    <li><a href="index.html#contacto">Información de contacto</a></li>
+                    <li><a href="index.html#contacto">Formulario de contacto</a></li>
+                    <li><a href="index.html#envio-documentos">Envío seguro de documentos</a></li>
+                    <li><a href="index.html#cita">Reserva de cita online</a></li>
+                </ul>
+            </div>
+
+            <div class="sitemap-section">
+                <h2>⚖️ Legal</h2>
+                <ul>
+                    <li><a href="aviso-legal.html">Aviso Legal</a></li>
+                    <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                    <li><a href="politica-cookies.html">Política de Cookies</a></li>
+                    <li><a href="politica-datos.html">Protección de Datos</a></li>
+                    <li><a href="mapa-sitio.html">Mapa del Sitio (esta página)</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 María Teresa Sánchez-Seco Alcocer · Colegiada nº 4138</p>
+        <div class="footer-links">
+            <a href="aviso-legal.html">Aviso Legal</a>
+            <a href="politica-privacidad.html">Política de Privacidad</a>
+            <a href="politica-cookies.html">Política de Cookies</a>
+            <a href="politica-datos.html">Protección de Datos</a>
+            <a href="mapa-sitio.html">Mapa del Sitio</a>
+        </div>
+        <p class="copyright">Email: <a href="mailto:Teresasanchezseco@gmail.com">Teresasanchezseco@gmail.com</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,1848 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="María Teresa Sánchez-Seco Alcocer - Abogada en Alcalá de Henares. Asesoramiento jurídico personalizado con más de 15 años de experiencia.">
+    <title>María Teresa Sánchez-Seco Alcocer | Abogada en Alcalá de Henares</title>
+    <style>
+        :root {
+            --color-cream: #fffef9;
+            --color-gold: #c9a961;
+            --color-gold-light: #e6d5b8;
+            --color-gold-dark: #b8960c;
+            --color-gold-bg: #f5f0e6;
+            --color-gold-bg-dark: #e8e0d0;
+            --color-charcoal: #2d3436;
+            --color-gray: #636e72;
+            --color-light-gray: #f5f6fa;
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--color-gold-bg);
+            color: var(--color-charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-serif);
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, var(--color-charcoal) 0%, #1a1a1a 100%);
+            color: var(--color-cream);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(201, 169, 97, 0.2);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--color-cream);
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+            color: var(--color-gold);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text strong {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            color: var(--color-gold);
+        }
+
+        .logo-text span {
+            font-size: 0.85rem;
+            color: var(--color-gold-light);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--color-cream);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-gold);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-gold);
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
+            color: var(--color-charcoal) !important;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(201, 169, 97, 0.4);
+        }
+
+        .cta-button::after {
+            display: none !important;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--color-gold);
+            transition: var(--transition);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            background: linear-gradient(135deg, rgba(45, 52, 54, 0.95) 0%, rgba(26, 26, 26, 0.9) 100%), 
+                        url('/hero.webp') center/cover;
+            color: var(--color-cream);
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(201, 169, 97, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--color-gold);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.25rem;
+            color: var(--color-gold-light);
+            margin-bottom: 1.5rem;
+            font-family: var(--font-serif);
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
+            color: var(--color-charcoal);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(201, 169, 97, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-cream);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 2px solid var(--color-gold);
+            transition: var(--transition);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-gold);
+            color: var(--color-charcoal);
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            background: rgba(255, 254, 249, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(201, 169, 97, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: rgba(201, 169, 97, 0.15);
+            border-color: var(--color-gold);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--color-gold);
+            display: block;
+            font-family: var(--font-serif);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--color-gold-light);
+            margin-top: 0.5rem;
+        }
+
+        /* Sections General */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--color-charcoal);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-gold), var(--color-gold-dark));
+        }
+
+        .section-header p {
+            color: var(--color-gray);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 1.5rem auto 0;
+        }
+
+        /* Services Section */
+        .services {
+            background: var(--color-cream);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: var(--transition);
+            border: 1px solid var(--color-gold-light);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(201, 169, 97, 0.2);
+            border-color: var(--color-gold);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: var(--color-charcoal);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            color: var(--color-gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .link-gold {
+            color: var(--color-gold);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .link-gold:hover {
+            color: var(--color-gold-dark);
+            gap: 0.75rem;
+        }
+
+        /* About Section */
+        .about {
+            background: linear-gradient(135deg, var(--color-gold-bg) 0%, var(--color-gold-bg-dark) 100%);
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            color: var(--color-charcoal);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            color: var(--color-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .feature-icon {
+            color: var(--color-gold);
+            font-size: 1.2rem;
+        }
+
+        /* Practice Areas */
+        .practice-areas {
+            background: var(--color-gold-bg-dark);
+            color: var(--color-charcoal);
+        }
+
+        .practice-areas .section-header h2 {
+            color: var(--color-charcoal);
+        }
+
+        .practice-areas .section-header p {
+            color: var(--color-gray);
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .area-tag {
+            background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
+            color: var(--color-charcoal);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: default;
+            box-shadow: 0 4px 15px rgba(201, 169, 97, 0.2);
+        }
+
+        .area-tag:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(201, 169, 97, 0.4);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--color-cream);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--color-gold);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--color-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--color-gold), var(--color-gold-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--color-charcoal);
+        }
+
+        .author-info strong {
+            color: var(--color-charcoal);
+            display: block;
+        }
+
+        .author-info span {
+            color: var(--color-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Blog Section */
+        .blog {
+            background: var(--color-gold-bg);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: var(--transition);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 2rem;
+        }
+
+        .blog-category {
+            color: var(--color-gold);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-date {
+            color: var(--color-gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-card h3 {
+            color: var(--color-charcoal);
+            margin-bottom: 1rem;
+        }
+
+        .blog-card p {
+            color: var(--color-gray);
+            margin-bottom: 1rem;
+        }
+
+        .blog-full-text {
+            display: none;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--color-gold-light);
+        }
+
+        .blog-full-text.active {
+            display: block;
+        }
+
+        .read-more-btn {
+            background: none;
+            border: none;
+            color: var(--color-gold);
+            cursor: pointer;
+            font-weight: 600;
+            padding: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .read-more-btn:hover {
+            color: var(--color-gold-dark);
+            gap: 0.75rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, var(--color-charcoal) 0%, #1a1a1a 100%);
+            color: var(--color-cream);
+        }
+
+        .contact .section-header h2 {
+            color: var(--color-cream);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h3 {
+            color: var(--color-gold);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-detail {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-detail strong {
+            color: var(--color-gold);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-detail p, .contact-detail a {
+            color: var(--color-cream);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-detail a:hover {
+            color: var(--color-gold);
+        }
+
+        .contact-form {
+            background: rgba(255, 254, 249, 0.05);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(201, 169, 97, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--color-gold-light);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid rgba(201, 169, 97, 0.5);
+            border-radius: 8px;
+            background: rgba(255, 254, 249, 0.95);
+            color: var(--color-charcoal);
+            font-family: inherit;
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-gold);
+            background: white;
+            box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.1);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--color-gray);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Secure Upload Section */
+        .secure-upload {
+            background: var(--color-gold-bg);
+        }
+
+        .secure-upload .section-header h2 {
+            color: var(--color-charcoal);
+        }
+
+        .upload-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            border: 2px solid var(--color-gold-light);
+            box-shadow: 0 4px 20px rgba(201, 169, 97, 0.15);
+        }
+
+        .upload-form .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .upload-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--color-charcoal);
+            font-weight: 600;
+        }
+
+        .upload-form input,
+        .upload-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--color-gold-light);
+            border-radius: 8px;
+            background: var(--color-cream);
+            color: var(--color-charcoal);
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .upload-form input:focus,
+        .upload-form textarea:focus {
+            outline: none;
+            border-color: var(--color-gold);
+            background: white;
+        }
+
+        .upload-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .file-upload {
+            border: 2px dashed var(--color-gold);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            background: var(--color-gold-bg);
+        }
+
+        .file-upload:hover {
+            border-color: var(--color-gold-dark);
+            background: var(--color-gold-light);
+        }
+
+        .security-badges {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--color-gold-light);
+        }
+
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .badge-icon {
+            font-size: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-charcoal);
+            color: var(--color-cream);
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--color-gold);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: var(--color-gold-light);
+            text-decoration: none;
+            line-height: 1.8;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--color-gold);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(201, 169, 97, 0.3);
+            color: var(--color-gold-light);
+            font-size: 0.9rem;
+        }
+
+        /* Social Media - Professional SVG Icons */
+        .social-links {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .social-link svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .social-link.facebook { background: #3b5998; }
+        .social-link.twitter { background: #1da1f2; }
+        .social-link.linkedin { background: #0077b5; }
+        .social-link.instagram { 
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+        }
+
+        /* Contact Icons - Professional SVG */
+        .contact-icon {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 8px;
+            color: var(--color-gold);
+        }
+
+        .contact-icon svg {
+            width: 100%;
+            height: 100%;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* Floating Buttons */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: var(--color-gold);
+            color: var(--color-charcoal);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(201, 169, 97, 0.4);
+            z-index: 99;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
+            transition: var(--transition);
+        }
+
+        .scroll-top.visible {
+            display: flex;
+        }
+
+        .scroll-top:hover {
+            background: var(--color-gold-dark);
+            transform: translateY(-3px);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(5px);
+            overflow-y: auto;
+        }
+
+        .modal-content {
+            background: var(--color-cream);
+            margin: 5% auto;
+            padding: 2.5rem;
+            border-radius: 12px;
+            max-width: 700px;
+            position: relative;
+            animation: modalSlide 0.3s ease-out;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        @keyframes modalSlide {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .close-modal {
+            position: absolute;
+            right: 1.5rem;
+            top: 1.5rem;
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--color-gray);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            color: var(--color-charcoal);
+        }
+
+        .appointment-option {
+            border: 2px solid var(--color-gold-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-bottom: 1rem;
+            background: white;
+        }
+
+        .appointment-option:hover {
+            border-color: var(--color-gold);
+            background: rgba(201, 169, 97, 0.05);
+        }
+
+        .appointment-option.selected {
+            border-color: var(--color-gold);
+            background: rgba(201, 169, 97, 0.1);
+            box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero-container,
+            .about-container,
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .services-grid,
+            .testimonials-grid,
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+            }
+
+            .scroll-top {
+                left: 20px;
+                bottom: 20px;
+                width: 45px;
+                height: 45px;
+            }
+
+            .modal-content {
+                margin: 10% auto;
+                padding: 1.5rem;
+                max-width: 95%;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content,
+        .stat-card,
+        .service-card,
+        .testimonial-card {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Scroll to Top Button (LEFT SIDE) -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()" title="Volver arriba">
+        ↑
+    </button>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <span class="logo-icon">⚖️</span>
+                <div class="logo-text">
+                    <strong>María Teresa Sánchez-Seco</strong>
+                    <span>Abogada · Colegiada nº 4138</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#sobre">Sobre el Despacho</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#cita" class="cta-button" onclick="openModal()">Pedir Cita</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>María Teresa Sánchez-Seco Alcocer</h1>
+                <p class="subtitle">Abogada · Alcalá de Henares</p>
+                <p>Asesoramiento jurídico personalizado con experiencia y compromiso. Defensa profesional de sus derechos e intereses con experiencia consolidada en Alcalá de Henares.</p>
+                <div class="hero-buttons">
+                    <a href="#cita" class="btn-primary" onclick="openModal()">
+                        <span>📅</span>
+                        Pedir Cita
+                    </a>
+                    <a href="tel:+34918885941" class="btn-secondary">
+                        <span>📞</span>
+                        91 888 59 41
+                    </a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <span class="stat-number">15+</span>
+                    <div class="stat-label">Años de Experiencia</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">500+</span>
+                    <div class="stat-label">Casos Resueltos</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">98%</span>
+                    <div class="stat-label">Éxito en Casos</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">10+</span>
+                    <div class="stat-label">Áreas de Práctica</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Servicios</h2>
+                <p>Asesoramiento Legal Integral - Ofrecemos servicios jurídicos completos adaptados a sus necesidades, con atención personalizada y soluciones efectivas para cada caso.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>Asesoramiento Legal Personalizado</h3>
+                    <p>Análisis detallado de tu caso con soluciones jurídicas adaptadas a tus necesidades específicas.</p>
+                    <a href="#cita" class="link-gold" onclick="openModal()">Solicitar consulta →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚖️</div>
+                    <h3>Defensa Jurídica</h3>
+                    <p>Representación legal en todas las jurisdicciones con defensa rigurosa de tus derechos e intereses.</p>
+                    <a href="#cita" class="link-gold" onclick="openModal()">Solicitar consulta →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3>Consultas Presenciales</h3>
+                    <p>Reuniones en nuestro despacho de Alcalá de Henares para un trato cercano y confidencial.</p>
+                    <a href="#cita" class="link-gold" onclick="openModal()">Solicitar consulta →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Videoconsultas</h3>
+                    <p>Asesoramiento legal profesional desde cualquier lugar mediante videoconferencia segura.</p>
+                    <a href="#cita" class="link-gold" onclick="openModal()">Solicitar consulta →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Consultas Telefónicas</h3>
+                    <p>Atención inmediata y orientación legal por teléfono para resolver tus dudas urgentes.</p>
+                    <a href="#cita" class="link-gold" onclick="openModal()">Solicitar consulta →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚨</div>
+                    <h3>Atención Urgente</h3>
+                    <p>Servicio prioritario para casos que requieren actuación legal inmediata y efectiva.</p>
+                    <a href="#cita" class="link-gold" onclick="openModal()">Solicitar consulta →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="sobre">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-image">
+                   <img src="/despacho.webp" alt="Despacho profesional en Alcalá de Henares">
+                </div>
+                <div class="about-content">
+                    <h2>Sobre el Despacho</h2>
+                    <p><strong>Experiencia y Compromiso Legal</strong></p>
+                    <p>El despacho de María Teresa Sánchez-Seco Alcocer ofrece asesoramiento jurídico profesional en Alcalá de Henares, con más de 15 años de experiencia defendiendo los derechos e intereses de particulares y empresas.</p>
+                    <p>Colegiada nº 4138 en el Colegio de Abogados de Alcalá de Henares, nuestra práctica se caracteriza por un enfoque humano y personalizado, donde cada cliente recibe la atención y dedicación que su caso merece.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <span class="feature-icon">✓</span>
+                            <span>15+ Años</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">✓</span>
+                            <span>10+ Áreas</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">✓</span>
+                            <span>500+ Clientes</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">✓</span>
+                            <span>Alcalá de Henares</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Areas - 8 areas -->
+    <section class="practice-areas">
+        <div class="container">
+            <div class="section-header">
+                <h2>Áreas de Práctica</h2>
+                <p>Especialidades Jurídicas - Amplia experiencia en múltiples áreas del derecho para ofrecer soluciones integrales a sus necesidades legales.</p>
+            </div>
+            <div class="areas-grid">
+                <div class="area-tag">Derecho Civil</div>
+                <div class="area-tag">Derecho Penal</div>
+                <div class="area-tag">Derecho Laboral</div>
+                <div class="area-tag">Derecho Mercantil</div>
+                <div class="area-tag">Derecho Administrativo</div>
+                <div class="area-tag">Derecho de Familia</div>
+                <div class="area-tag">Herencias y Sucesiones</div>
+                <div class="area-tag">Extranjería</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Testimonios</h2>
+                <p>Lo Que Dicen Nuestros Clientes - La satisfacción de nuestros clientes es nuestra mejor carta de presentación.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Excelente profesional. María Teresa resolvió mi caso con gran eficacia y dedicación. Su trato cercano y profesional hizo todo el proceso mucho más llevadero."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">CM</div>
+                        <div class="author-info">
+                            <strong>Carlos Martínez</strong>
+                            <span>Empresario</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Contraté sus servicios para un tema familiar complejo. Su experiencia y conocimiento fueron fundamentales para lograr el mejor resultado posible. Totalmente recomendable."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AG</div>
+                        <div class="author-info">
+                            <strong>Ana García</strong>
+                            <span>Particular</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Gran profesional y mejor persona. Me ayudó en un proceso laboral complicado con total transparencia y honestidad. Sus honorarios son justos y su trabajo impecable."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div class="author-info">
+                            <strong>Miguel Ángel Ruiz</strong>
+                            <span>Autónomo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section - 3 articles with full text -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2>Blog Jurídico</h2>
+                <p>Actualidad Legal y Sentencias - Manténgase informado sobre las últimas novedades legales, sentencias relevantes y análisis jurídicos.</p>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1589391886645-d51941baf7fb?w=600&h=400&fit=crop" alt="Tribunal Supremo" class="blog-image">
+                    <div class="blog-content">
+                        <div class="blog-category">Derecho Civil</div>
+                        <div class="blog-date">15 de agosto de 2025</div>
+                        <h3>Sentencia del Tribunal Supremo sobre Cláusulas Abusivas en Hipotecas</h3>
+                        <p>Análisis de la reciente sentencia del TS que refuerza la protección al consumidor frente a cláusulas abusivas en contratos hipotecarios.</p>
+                        <div class="blog-full-text" id="blog1">
+                            <p><strong>El Tribunal Supremo ha emitido una sentencia histórica</strong> que refuerza significativamente la protección de los consumidores frente a las cláusulas abusivas en los contratos hipotecarios.</p>
+                            <p>Esta resolución establece que <strong>las entidades financieras deben demostrar de manera expresa</strong> que informaron adecuadamente al cliente sobre las condiciones de las cláusulas suelo y otras limitaciones de tipo de interés.</p>
+                            <p><strong>Puntos clave de la sentencia:</strong></p>
+                            <ul style="margin: 1rem 0; padding-left: 2rem; color: var(--color-gray);">
+                                <li>Transparencia material: No basta con incluir la cláusula en el contrato, debe explicarse de forma clara y comprensible.</li>
+                                <li>Carga de la prueba: Corresponde al banco demostrar que el cliente fue debidamente informado.</li>
+                                <li>Restitución completa: Los afectados tienen derecho a la devolución de todas las cantidades pagadas indebidamente.</li>
+                                <li>Intereses legales: Se aplicarán desde la fecha de cada pago indebido.</li>
+                            </ul>
+                            <p><strong>¿Quiénes pueden beneficiarse?</strong> Todos aquellos consumidores que hayan tenido cláusulas suelo en sus hipotecas, incluso si ya han vendido la vivienda o cancelado el préstamo.</p>
+                            <p style="margin-top: 1rem;"><em>Si cree que puede estar afectado, le recomendamos solicitar una revisión gratuita de su contrato hipotecario.</em></p>
+                        </div>
+                        <button class="read-more-btn" onclick="toggleBlog('blog1', this)">
+                            Leer más →
+                        </button>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop" alt="Derecho Laboral" class="blog-image">
+                    <div class="blog-content">
+                        <div class="blog-category">Derecho Laboral</div>
+                        <div class="blog-date">10 de agosto de 2025</div>
+                        <h3>Nuevas Regulaciones en Derecho Laboral para 2025</h3>
+                        <p>Actualizaciones importantes en la legislación laboral que afectan tanto a empresas como a trabajadores.</p>
+                        <div class="blog-full-text" id="blog2">
+                            <p><strong>El año 2025 trae importantes novedades legislativas</strong> en materia laboral que tanto empresas como trabajadores deben conocer para adaptarse correctamente.</p>
+                            <p><strong>Principales cambios:</strong></p>
+                            <ul style="margin: 1rem 0; padding-left: 2rem; color: var(--color-gray);">
+                                <li><strong>Salario Mínimo Interprofesional:</strong> Se incrementa hasta los 1.134 euros mensuales en 14 pagas, lo que supone un aumento del 4,7% respecto a 2024.</li>
+                                <li><strong>Reducción de jornada laboral:</strong> Se establece la reducción progresiva de la jornada laboral máxima a 37,5 horas semanales sin reducción salarial.</li>
+                                <li><strong>Teletrabajo:</strong> Nuevas regulaciones sobre el derecho a la desconexión digital y la compensación de gastos derivados del trabajo remoto.</li>
+                                <li><strong>Contratos temporales:</strong> Se refuerzan las limitaciones a la temporalidad, con mayores controles sobre la causalidad de los contratos de duración determinada.</li>
+                                <li><strong>Conciliación:</strong> Ampliación de los permisos retribuidos por cuidado de familiares y adaptación de horarios laborales.</li>
+                            </ul>
+                            <p><strong>Impacto en las empresas:</strong> Las compañías deberán revisar sus políticas de recursos humanos y adaptar sus contratos y convenios colectivos a estas nuevas disposiciones.</p>
+                            <p><strong>Recomendación:</strong> Tanto empleadores como trabajadores deberían consultar con un especialista en derecho laboral para asegurar el cumplimiento normativo y aprovechar las nuevas oportunidades que estas reformas ofrecen.</p>
+                        </div>
+                        <button class="read-more-btn" onclick="toggleBlog('blog2', this)">
+                            Leer más →
+                        </button>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=600&h=400&fit=crop" alt="Embajada Madrid" class="blog-image">
+                    <div class="blog-content">
+                        <div class="blog-category">Derecho Internacional</div>
+                        <div class="blog-date">5 de agosto de 2025</div>
+                        <h3>Sentencia TJUE: Embajadas y Responsabilidad Laboral en Madrid</h3>
+                        <p>El Tribunal de Justicia de la Unión Europea ha establecido criterios claros sobre la responsabilidad de las embajadas en litigios laborales en España.</p>
+                        <div class="blog-full-text" id="blog3">
+                            <p><strong>El Tribunal de Justicia de la Unión Europea (TJUE) ha dictado una sentencia trascendental</strong> que clarifica la responsabilidad laboral de las embajadas y representaciones diplomáticas en España.</p>
+                            <p><strong>El caso:</strong> Un trabajador local contratado por una embajada en Madrid reclamó el reconocimiento de sus derechos laborales tras ser despedido sin causa justificada ni indemnización.</p>
+                            <p><strong>Puntos clave de la sentencia:</strong></p>
+                            <ul style="margin: 1rem 0; padding-left: 2rem; color: var(--color-gray);">
+                                <li><strong>Jurisdicción española:</strong> Los tribunales españoles son competentes para conocer de los litigios laborales con embajadas cuando el trabajador es nacional español o reside habitualmente en España.</li>
+                                <li><strong>Inmunidad limitada:</strong> La inmunidad de jurisdicción de los Estados extranjeros no ampara las relaciones laborales de personal local no diplomático.</li>
+                                <li><strong>Derechos laborales plenos:</strong> Los trabajadores locales de embajadas tienen derecho a la misma protección que el resto de trabajadores españoles, incluyendo indemnización por despido, vacaciones y seguridad social.</li>
+                                <li><strong>Aplicación del Estatuto de los Trabajadores:</strong> La legislación laboral española es de aplicación directa a estas relaciones laborales.</li>
+                            </ul>
+                            <p><strong>Implicaciones prácticas:</strong> Esta sentencia abre la puerta a que miles de trabajadores locales de embajadas y organismos internacionales en España puedan reclamar sus derechos laborales ante los tribunales españoles.</p>
+                            <p><strong>Plazo de reclamación:</strong> Los afectados disponen de un año desde el despido para interponer la demanda laboral.</p>
+                            <p style="margin-top: 1rem;"><em>Si trabaja o ha trabajado para una embajada y considera que sus derechos han sido vulnerados, le recomendamos consultar con un especialista en derecho laboral internacional.</em></p>
+                        </div>
+                        <button class="read-more-btn" onclick="toggleBlog('blog3', this)">
+                            Leer más →
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secure Upload Section -->
+    <section class="secure-upload" id="envio-documentos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Envío Seguro de Documentos</h2>
+                <p>Área Confidencial - Envíe su documentación de forma segura y cifrada</p>
+            </div>
+            <div class="upload-container">
+                <form class="upload-form" onsubmit="handleSecureUpload(event)">
+                    <div class="form-group">
+                        <label for="upload-nombre">Nombre completo *</label>
+                        <input type="text" id="upload-nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="upload-email">Email *</label>
+                        <input type="email" id="upload-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="upload-referencia">Referencia del caso (opcional)</label>
+                        <input type="text" id="upload-referencia" name="referencia">
+                    </div>
+                    <div class="form-group">
+                        <label for="upload-descripcion">Descripción de los documentos</label>
+                        <textarea id="upload-descripcion" name="descripcion" placeholder="Describa brevemente los documentos que va a enviar..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Seleccionar documentos *</label>
+                        <div class="file-upload" onclick="document.getElementById('upload-files').click()">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">📎</div>
+                            <p>Haga clic para seleccionar archivos o arrastre y suelte aquí</p>
+                            <p style="font-size: 0.85rem; color: var(--color-gray); margin-top: 0.5rem;">PDF, DOC, DOCX, JPG, PNG, ZIP (máx. 10MB por archivo)</p>
+                            <input type="file" id="upload-files" name="files" multiple style="display: none;" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.zip" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%;">
+                        🔒 Enviar Documentos de Forma Segura
+                    </button>
+                </form>
+                <div class="security-badges">
+                    <div class="badge">
+                        <span class="badge-icon">🔐</span>
+                        <div>
+                            <strong>Cifrado SSL</strong>
+                            <p style="font-size: 0.85rem; color: var(--color-gray);">Conexión segura y cifrada</p>
+                        </div>
+                    </div>
+                    <div class="badge">
+                        <span class="badge-icon">✓</span>
+                        <div>
+                            <strong>RGPD Compliant</strong>
+                            <p style="font-size: 0.85rem; color: var(--color-gray);">Protección de datos garantizada</p>
+                        </div>
+                    </div>
+                    <div class="badge">
+                        <span class="badge-icon">🔒</span>
+                        <div>
+                            <strong>Confidencial</strong>
+                            <p style="font-size: 0.85rem; color: var(--color-gray);">Secreto profesional absoluto</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contacto</h2>
+                <p>Estamos Aquí para Ayudarle - Póngase en contacto con nosotros para cualquier consulta legal. Le atenderemos personalmente.</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <div class="contact-detail">
+                        <strong><span class="contact-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>Dirección</strong>
+                        <p>Calle Teniente Ruiz nº 10, 1ª planta, oficina 4<br>28805 Alcalá de Henares</p>
+                    </div>
+                    <div class="contact-detail">
+                        <strong><span class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>Teléfono Fijo</strong>
+                        <p><a href="tel:+34918885941">91 888 59 41</a></p>
+                    </div>
+                    <div class="contact-detail">
+                        <strong><span class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>Teléfono Móvil</strong>
+                        <p><a href="tel:+34646205732">646 205 732</a></p>
+                    </div>
+                    <div class="contact-detail">
+                        <strong><span class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></span>Email</strong>
+                        <p><a href="mailto:Teresasanchezseco@gmail.com">Teresasanchezseco@gmail.com</a></p>
+                    </div>
+                    <div class="contact-detail">
+                        <strong>Horario</strong>
+                        <p>Lunes - Viernes<br>09:00 - 14:00 | 16:00 - 19:00</p>
+                    </div>
+                    
+                    <!-- Social Media - Professional SVG Icons -->
+                    <div style="margin-top: 2rem;">
+                        <strong style="color: var(--color-gold); display: block; margin-bottom: 1rem;">Síguenos en Redes Sociales</strong>
+                        <div class="social-links">
+                            <a href="https://facebook.com/mtsanchezabogados" target="_blank" class="social-link facebook" title="Facebook">
+                                <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            </a>
+                            <a href="https://twitter.com/mtsanchezabog" target="_blank" class="social-link twitter" title="Twitter">
+                                <svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                            </a>
+                            <a href="https://linkedin.com/in/mtsanchezabogados" target="_blank" class="social-link linkedin" title="LinkedIn">
+                                <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            </a>
+                            <a href="https://instagram.com/mtsanchezabogados" target="_blank" class="social-link instagram" title="Instagram">
+                                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3 style="color: var(--color-gold); margin-bottom: 1.5rem;">Envíenos un Mensaje</h3>
+                    <form onsubmit="handleContactSubmit(event)">
+                        <div class="form-group">
+                            <label for="contact-nombre">Nombre *</label>
+                            <input type="text" id="contact-nombre" name="nombre" required placeholder="Su nombre completo">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-telefono">Teléfono *</label>
+                            <input type="tel" id="contact-telefono" name="telefono" required placeholder="Su número de teléfono">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email *</label>
+                            <input type="email" id="contact-email" name="email" required placeholder="su@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-asunto">Asunto *</label>
+                            <input type="text" id="contact-asunto" name="asunto" required placeholder="Asunto del mensaje">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-mensaje">Mensaje *</label>
+                            <textarea id="contact-mensaje" name="mensaje" required placeholder="Escriba su mensaje aquí..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width: 100%;">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>María Teresa Sánchez-Seco</h3>
+                <p>Abogada · Colegiada nº 4138</p>
+                <p>Despacho de abogados en Alcalá de Henares con amplia experiencia en asesoramiento jurídico personalizado.</p>
+                <div class="social-links">
+                    <a href="https://facebook.com/mtsanchezabogados" target="_blank" class="social-link facebook" title="Facebook">
+                        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="https://twitter.com/mtsanchezabog" target="_blank" class="social-link twitter" title="Twitter">
+                        <svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                    </a>
+                    <a href="https://linkedin.com/in/mtsanchezabogados" target="_blank" class="social-link linkedin" title="LinkedIn">
+                        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="https://instagram.com/mtsanchezabogados" target="_blank" class="social-link instagram" title="Instagram">
+                        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <p><a href="#servicios">Servicios</a></p>
+                <p><a href="#sobre">Sobre el Despacho</a></p>
+                <p><a href="#cita" onclick="openModal()">Pedir Cita</a></p>
+                <p><a href="#blog">Blog Jurídico</a></p>
+                <p><a href="#envio-documentos">Envío Seguro</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>📍 Calle Teniente Ruiz nº 10, 1ª planta, oficina 4<br>28805 Alcalá de Henares</p>
+                <p>📞 <a href="tel:+34918885941">91 888 59 41</a></p>
+                <p>📱 <a href="tel:+34646205732">646 205 732</a></p>
+                <p>✉️ <a href="mailto:Teresasanchezseco@gmail.com">Teresasanchezseco@gmail.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <p><a href="aviso-legal.html">Aviso Legal</a></p>
+                <p><a href="politica-privacidad.html">Política de Privacidad</a></p>
+                <p><a href="politica-cookies.html">Política de Cookies</a></p>
+                <p><a href="politica-datos.html">Protección de Datos</a></p>
+                <p><a href="mapa-sitio.html">Mapa del Sitio</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 María Teresa Sánchez-Seco Alcocer. Todos los derechos reservados.<br>
+            Colegiada nº 4138 · Colegio de Abogados de Alcalá de Henares</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/34646205732?text=Hola,%20me%20gustaría%20solicitar%20información%20sobre%20sus%20servicios%20legales" 
+       class="whatsapp-float" 
+       target="_blank" 
+       title="Contactar por WhatsApp">
+        💬
+    </a>
+
+    <!-- Appointment Modal - FIXED: Independent selection -->
+    <div id="appointmentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2 style="color: var(--color-charcoal); margin-bottom: 1rem; font-family: var(--font-serif); font-size: 2rem;">Reserve su Cita</h2>
+            <p style="color: var(--color-gray); margin-bottom: 2rem;">Elija el tipo de consulta que prefiera y reserve su cita en el horario que mejor le convenga.</p>
+            
+            <div id="appointmentOptions">
+                <div class="appointment-option" onclick="selectAppointmentType('presencial', event)">
+                    <h3 style="color: var(--color-charcoal); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="font-size: 1.5rem;">🏢</span>
+                        Reunión Presencial
+                    </h3>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">En nuestra oficina de Alcalá de Henares<br><strong>60 minutos</strong></p>
+                </div>
+                <div class="appointment-option" onclick="selectAppointmentType('telefonica', event)">
+                    <h3 style="color: var(--color-charcoal); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="font-size: 1.5rem;">📱</span>
+                        Llamada Telefónica
+                    </h3>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">Consulta por teléfono<br><strong>30 minutos</strong></p>
+                </div>
+                <div class="appointment-option" onclick="selectAppointmentType('videoconsulta', event)">
+                    <h3 style="color: var(--color-charcoal); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="font-size: 1.5rem;">💻</span>
+                        Videoconsulta
+                    </h3>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">Reunión online mediante videollamada<br><strong>45 minutos</strong></p>
+                </div>
+                <div class="appointment-option" onclick="selectAppointmentType('urgente', event)">
+                    <h3 style="color: var(--color-charcoal); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="font-size: 1.5rem;">🚨</span>
+                        Atención Urgente
+                    </h3>
+                    <p style="color: var(--color-gray); font-size: 0.95rem;">Consulta prioritaria en menos de 24h<br><strong>Variable</strong></p>
+                </div>
+            </div>
+            
+            <div id="appointmentForm" style="margin-top: 2rem; display: none;">
+                <form onsubmit="handleAppointmentSubmit(event)">
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--color-charcoal); font-weight: 600;">Nombre completo *</label>
+                        <input type="text" id="apt-nombre" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-gold-light); border-radius: 8px; background: white; color: var(--color-charcoal);">
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--color-charcoal); font-weight: 600;">Teléfono *</label>
+                        <input type="tel" id="apt-telefono" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-gold-light); border-radius: 8px; background: white; color: var(--color-charcoal);">
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--color-charcoal); font-weight: 600;">Email *</label>
+                        <input type="email" id="apt-email" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-gold-light); border-radius: 8px; background: white; color: var(--color-charcoal);">
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--color-charcoal); font-weight: 600;">Fecha preferida *</label>
+                        <input type="date" id="apt-fecha" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-gold-light); border-radius: 8px; background: white; color: var(--color-charcoal);">
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--color-charcoal); font-weight: 600;">Hora preferida *</label>
+                        <input type="time" id="apt-hora" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-gold-light); border-radius: 8px; background: white; color: var(--color-charcoal);">
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%;">Confirmar Cita</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll to top button
+        const scrollTopBtn = document.getElementById('scrollTop');
+        
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Modal functions
+        function openModal() {
+            document.getElementById('appointmentModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            // Reset modal state
+            document.querySelectorAll('.appointment-option').forEach(opt => opt.classList.remove('selected'));
+            document.getElementById('appointmentForm').style.display = 'none';
+        }
+
+        function closeModal() {
+            document.getElementById('appointmentModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+            document.getElementById('appointmentForm').style.display = 'none';
+            document.querySelectorAll('.appointment-option').forEach(opt => opt.classList.remove('selected'));
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('appointmentModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // FIXED: Appointment type selection - independent options
+        function selectAppointmentType(type, event) {
+            // Prevent event bubbling
+            if (event) event.stopPropagation();
+            
+            // Remove selected class from ALL options
+            document.querySelectorAll('.appointment-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            
+            // Add selected class ONLY to the clicked option
+            if (event && event.currentTarget) {
+                event.currentTarget.classList.add('selected');
+            }
+            
+            // Show form
+            document.getElementById('appointmentForm').style.display = 'block';
+            
+            // Scroll to form smoothly
+            setTimeout(() => {
+                const form = document.getElementById('appointmentForm');
+                if (form) {
+                    form.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            }, 100);
+        }
+
+        // Blog read more toggle
+        function toggleBlog(blogId, btn) {
+            const blogText = document.getElementById(blogId);
+            if (blogText.classList.contains('active')) {
+                blogText.classList.remove('active');
+                btn.innerHTML = 'Leer más →';
+            } else {
+                blogText.classList.add('active');
+                btn.innerHTML = '← Leer menos';
+            }
+        }
+
+        // Form handlers
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            alert('Gracias por su mensaje. Nos pondremos en contacto con usted pronto.');
+            e.target.reset();
+        }
+
+        function handleSecureUpload(e) {
+            e.preventDefault();
+            alert('Documentos enviados de forma segura. Recibirá una confirmación por email.');
+            e.target.reset();
+        }
+
+        function handleAppointmentSubmit(e) {
+            e.preventDefault();
+            alert('Cita solicitada correctamente. Le confirmaremos la disponibilidad por teléfono o email.');
+            closeModal();
+            e.target.reset();
+        }
+
+        // File upload drag and drop
+        const fileUpload = document.querySelector('.file-upload');
+        const fileInput = document.getElementById('upload-files');
+
+        if (fileUpload) {
+            fileUpload.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                fileUpload.style.borderColor = 'var(--color-gold-dark)';
+                fileUpload.style.background = 'var(--color-gold-light)';
+            });
+
+            fileUpload.addEventListener('dragleave', (e) => {
+                e.preventDefault();
+                fileUpload.style.borderColor = 'var(--color-gold)';
+                fileUpload.style.background = 'var(--color-gold-bg)';
+            });
+
+            fileUpload.addEventListener('drop', (e) => {
+                e.preventDefault();
+                fileUpload.style.borderColor = 'var(--color-gold)';
+                fileUpload.style.background = 'var(--color-gold-bg)';
+                fileInput.files = e.dataTransfer.files;
+            });
+        }
+    </script>
+</body>
+</html>
