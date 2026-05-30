@@ -1,14 +1,14 @@
-"use client";
+"use client"
 
-import { useState } from "react";
+import { useState } from "react"
 import { 
   Menu, X, Users, FolderOpen, Settings, LogOut, 
-  Home, Briefcase, FileText, UserCircle 
-} from "lucide-react";
+  Home, FileText, UserCircle 
+} from "lucide-react"
 
 export default function DashboardPage() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-  const [activeTab, setActiveTab] = useState("inicio");
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true)
+  const [activeTab, setActiveTab] = useState("inicio")
 
   const menuItems = [
     { id: "inicio", label: "Inicio", icon: Home },
@@ -16,7 +16,7 @@ export default function DashboardPage() {
     { id: "clientes", label: "Clientes", icon: Users },
     { id: "documentos", label: "Documentos", icon: FileText },
     { id: "configuracion", label: "Configuración", icon: Settings },
-  ];
+  ]
 
   return (
     <div className="flex min-h-screen bg-slate-950 text-white font-sans">
@@ -43,8 +43,8 @@ export default function DashboardPage() {
         {/* Menu Links */}
         <nav className="flex-1 py-6 space-y-2 px-3 overflow-y-auto">
           {menuItems.map((item) => {
-            const Icon = item.icon;
-            const isActive = activeTab === item.id;
+            const Icon = item.icon
+            const isActive = activeTab === item.id
             return (
               <button
                 key={item.id}
@@ -60,7 +60,7 @@ export default function DashboardPage() {
                   <span className="font-medium text-sm">{item.label}</span>
                 )}
               </button>
-            );
+            )
           })}
         </nav>
 
@@ -129,5 +129,5 @@ export default function DashboardPage() {
         </div>
       </main>
     </div>
-  );
+  )
 }
