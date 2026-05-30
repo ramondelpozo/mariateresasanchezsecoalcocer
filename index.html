@@ -1040,61 +1040,44 @@
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: linear-gradient(135deg, var(--color-charcoal) 0%, #1a1a1a 100%);
+                padding: 0.5rem 0;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+                z-index: 998;
+                gap: 0;
             }
-
-            .mobile-menu {
+            .nav-links.active {
                 display: flex;
             }
-
-            .hero-container,
-            .about-container,
-            .contact-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
+            .nav-links li {
+                width: 100%;
+                text-align: center;
             }
-
-            .hero-content h1 {
-                font-size: 2rem;
+            .nav-links a {
+                display: block;
+                padding: 1rem;
+                border-bottom: 1px solid rgba(201, 169, 97, 0.15);
             }
-
-            .hero-stats {
-                grid-template-columns: 1fr;
+            .nav-links a::after { display: none; }
+            .nav-links .cta-button {
+                margin: 0.5rem 1rem;
+                text-align: center;
             }
-
-            .section-header h2 {
-                font-size: 2rem;
-            }
-
-            .services-grid,
-            .testimonials-grid,
-            .blog-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about-features {
-                grid-template-columns: 1fr;
-            }
-
-            .whatsapp-float {
-                bottom: 20px;
-                right: 20px;
-                width: 50px;
-                height: 50px;
-                font-size: 24px;
-            }
-
-            .scroll-top {
-                left: 20px;
-                bottom: 20px;
-                width: 45px;
-                height: 45px;
-            }
-
-            .modal-content {
-                margin: 10% auto;
-                padding: 1.5rem;
-                max-width: 95%;
-            }
+            .mobile-menu { display: flex; }
+            .hero-container, .about-container, .contact-container { grid-template-columns: 1fr; gap: 2rem; }
+            .hero-content h1 { font-size: 2rem; }
+            .hero-stats { grid-template-columns: 1fr; }
+            .section-header h2 { font-size: 2rem; }
+            .services-grid, .testimonials-grid, .blog-grid { grid-template-columns: 1fr; }
+            .about-features { grid-template-columns: 1fr; }
+            .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 24px; }
+            .scroll-top { left: 20px; bottom: 20px; width: 45px; height: 45px; }
+            .modal-content { margin: 10% auto; padding: 1.5rem; max-width: 95%; }
         }
 
         /* Animations */
@@ -1198,7 +1181,7 @@
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">📋</div>
+                    <div class="service-icon"></div>
                     <h3>Asesoramiento Legal Personalizado</h3>
                     <p>Análisis detallado de tu caso con soluciones jurídicas adaptadas a tus necesidades específicas.</p>
                     <a href="#cita" class="link-gold" onclick="openModal()">Solicitar consulta →</a>
@@ -1222,7 +1205,7 @@
                     <a href="#cita" class="link-gold" onclick="openModal()">Solicitar consulta →</a>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">📱</div>
+                    <div class="service-icon"></div>
                     <h3>Consultas Telefónicas</h3>
                     <p>Atención inmediata y orientación legal por teléfono para resolver tus dudas urgentes.</p>
                     <a href="#cita" class="link-gold" onclick="openModal()">Solicitar consulta →</a>
@@ -1476,7 +1459,7 @@
                         </div>
                     </div>
                     <div class="badge">
-                        <span class="badge-icon">🔒</span>
+                        <span class="badge-icon"></span>
                         <div>
                             <strong>Confidencial</strong>
                             <p style="font-size: 0.85rem; color: var(--color-gray);">Secreto profesional absoluto</p>
@@ -1646,7 +1629,7 @@
                 </div>
                 <div class="appointment-option" onclick="selectAppointmentType('telefonica', event)">
                     <h3 style="color: var(--color-charcoal); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.75rem;">
-                        <span style="font-size: 1.5rem;">📱</span>
+                        <span style="font-size: 1.5rem;"></span>
                         Llamada Telefónica
                     </h3>
                     <p style="color: var(--color-gray); font-size: 0.95rem;">Consulta por teléfono<br><strong>30 minutos</strong></p>
@@ -1696,13 +1679,22 @@
     </div>
 
     <script>
-        // Mobile menu toggle
+        // Mobile menu toggle - CORREGIDO PARA DESPLIEGUE VERTICAL
         const mobileMenu = document.querySelector('.mobile-menu');
         const navLinks = document.querySelector('.nav-links');
 
-        mobileMenu.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-        });
+        if (mobileMenu && navLinks) {
+            mobileMenu.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            // Cerrar menú al pulsar un enlace
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
